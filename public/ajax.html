@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+    ></script>
+    <title>Express Intermediate</title>
+  </head>
+  <body>
+    <form method="POST" action="ajax">
+      <input type="text" name="username" />
+      <input type="submit" />
+    </form>
+
+    <script>
+      const body = {
+        firstname: "John",
+        lastname: "Doe",
+        sex: "m",
+      };
+      axios({
+        method: "POST",
+        url: "http://localhost:3000/ajax",
+        /*data: {
+          username: req.body
+        },
+        /*headers: {
+          // "content-type": "application/json",
+        },*/
+      }).then((res) => {
+        console.log(res);
+      });
+    </script>
+  </body>
+</html>
