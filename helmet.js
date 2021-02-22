@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.post("/ajax", (req, res) => {
   console.log(req.headers["content-type"]);
   console.log(req.body);
-  res.send("POSTing");
+  res.json("POSTing");
 });
 
 app.listen(3000);
